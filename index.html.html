@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Python Crash Course — Clickable Notes</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; max-width:900px; margin:24px auto; line-height:1.5; color:#111; padding:20px;}
+    h1{font-size:2rem;margin-bottom:0.25rem}
+    h2{font-size:1.25rem;margin-top:1.1rem}
+    nav{background:#f7f7f8;padding:12px;border-radius:10px;margin-bottom:18px}
+    a { color: #0b66ff; text-decoration:none }
+    a:hover { text-decoration: underline }
+    .toc ul{ columns:2; -webkit-columns:2; -moz-columns:2; padding-left:18px }
+    section { padding:10px 12px; border-left:3px solid #eee; margin-bottom:14px; background: #fff; border-radius:8px; box-shadow: 0 1px 0 rgba(0,0,0,0.02);}
+    .module-number { font-weight:700; color:#333; margin-right:6px; }
+    .toplink { float:right; font-size:0.9rem; }
+    pre { background:#f3f4f6; padding:10px; border-radius:6px; overflow:auto; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace; }
+  </style>
+</head>
+<body>
+  <h1>Python Crash Course — Clickable Notes</h1>
+  <p>Converted from the uploaded PDF. Quick clickable Table of Contents — click any module to jump to its notes.</p>
+  <nav class="toc">
+    <strong>Contents</strong>
+    <div class="toc">
+      <ul>
+        <li><a href="#module-1">Module 1 – Setup & Hello, World!</a></li>
+        <li><a href="#module-2">Module 2 – Syntax & Comments</a></li>
+        <li><a href="#module-3">Module 3 – Variables & Data Types</a></li>
+        <li><a href="#module-4">Module 4 – String Operations & Formatting</a></li>
+        <li><a href="#module-5">Module 5 – Basic Arithmetic & Built-in Functions</a></li>
+        <li><a href="#module-6">Module 6 – Lists</a></li>
+        <li><a href="#module-7">Module 7 – Tuples & Sets</a></li>
+        <li><a href="#module-8">Module 8 – Dictionaries</a></li>
+        <li><a href="#module-9">Module 9 – Control Flow: if, elif, else</a></li>
+        <li><a href="#module-10">Module 10 – Loops: for & while</a></li>
+        <li><a href="#module-11">Module 11 – Loop Control: break, continue, else</a></li>
+        <li><a href="#module-12">Module 12 – Functions</a></li>
+        <li><a href="#module-13">Module 13 – Scope & Lifetime (Beginner Friendly)</a></li>
+        <li><a href="#module-14">Module 14 – Error Handling: try/except/finally</a></li>
+        <li><a href="#module-15">Module 15 – File I/O</a></li>
+        <li><a href="#module-16">Module 16 – Modules & Packages</a></li>
+        <li><a href="#module-17">Module 17 – List Comprehensions & Generators</a></li>
+        <li><a href="#module-18">Module 18 – Classes & Objects</a></li>
+        <li><a href="#module-19">Module 19 – Simple OOP Project: Contact Manager</a></li>
+        <li><a href="#module-20">Module 20 – Capstone Challenge: Contact Book CLI</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="module-1"><a class="toplink" href="#top">Top</a><h2>Module 1 – Setup & Hello, World!</h2>Why this matters: Getting Python installed and choosing a beginner-friendly editor sets you up for success.
+A correct setup avoids environment problems so you can focus on learning. Lesson: Install Python from python.org. Use Thonny or Visual Studio Code. Create a file named hello.py and run it. Example code:
+<pre><code>print("Hello, World!")</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Hello, World!</code></pre>
+<strong>Challenge:</strong> Install Python and run the hello.py script. Then change the message to print your own name.
+</section>
+
+  <section id="module-2"><a class="toplink" href="#top">Top</a><h2>Module 2 – Syntax & Comments</h2>Why this matters: Python uses indentation (spaces) to structure code. Comments help explain code for humans; they do not run. Lesson: Use '#' for single-line comments and triple quotes for longer notes/docstrings. Example code:
+<pre><code># Single-line comment
+print("Readable code is easier to understand!")</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Readable code is easier to understand!</code></pre>
+<strong>Challenge:</strong> Write a script with a single-line comment and a docstring, then print a short message.
+</section>
+
+  <section id="module-3"><a class="toplink" href="#top">Top</a><h2>Module 3 – Variables & Data Types</h2>Why this matters: Variables are named storage boxes. They let you store values, reuse them, and change them. Python figures out types automatically (dynamic typing). Common types: int, float, str, bool. Example code:
+<pre><code>age = 25
+price = 19.99
+name = 'Alice'
+is_student = True
+print(type(age), type(price), type(name), type(is_student))</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>&lt;class 'int'&gt; &lt;class 'float'&gt; &lt;class 'str'&gt; &lt;class 'bool'&gt;</code></pre>
+<strong>Challenge:</strong> Create variables of int, float, and string types. Convert a numeric string into a number and perform a calculation.
+</section>
+
+  <section id="module-4"><a class="toplink" href="#top">Top</a><h2>Module 4 – String Operations & Formatting</h2>Why this matters: Strings are text. You will use them for outputs, user input, and files. Formatting strings with f-strings makes combining text and variables easy and readable. Lesson: Use concatenation, methods like .upper() and .replace(), and f-strings to embed values. Example code:
+<pre><code>greet = 'Hello'
+name = 'Bob'
+msg = f"{greet}, {name}!"
+print(msg)
+print(msg.upper())
+print(msg.replace('Bob','Alice'))
+age = 30
+print(f"{name} is {age} years old.")</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Hello, Bob!
+HELLO, BOB!
+Hello, Alice!
+Bob is 30 years old.</code></pre>
+<strong>Challenge:</strong> Simulate asking a user for name and age (via comments) and print a greeting using an f-string and two string methods.
+</section>
+
+  <section id="module-5"><a class="toplink" href="#top">Top</a><h2>Module 5 – Basic Arithmetic & Built-in Functions</h2>Why this matters: Basic math and built-in functions let you compute values and inspect data. Operators include +, -, *, /, //, %, **. Useful built-ins include len() and type(). Example code:
+<pre><code>a, b = 10, 3
+print(a + b, a - b, a * b, a / b, a // b, a % b, a ** b)
+s = 'Python'
+print(len(s), type(s))</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>13 7 30 3.3333333333333335 3 1 1000
+6 &lt;class 'str'&gt;</code></pre>
+<strong>Challenge:</strong> Calculate area and perimeter of a rectangle given width and height variables; print results and types.
+</section>
+
+  <section id="module-6"><a class="toplink" href="#top">Top</a><h2>Module 6 – Lists</h2>Why this matters: Lists store ordered collections of items you can change. They are ideal for sequences like student names, scores, or any group of values. Lesson: Use indexing, slicing, and methods like append(), remove(), pop(), and sort(). Example code:
+<pre><code>nums = [10, 20, 30, 40]
+print(nums[0], nums[-1], nums[1:3])
+nums.append(50)
+nums.remove(20)
+print(nums)
+nums.sort(reverse=True)
+print(nums)</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>10 40 [20, 30]
+[10, 30, 40, 50]
+[50, 40, 30, 10]</code></pre>
+<strong>Challenge:</strong> Create a list of 5 items, change one, slice a subset, and use two list methods.
+</section>
+
+  <section id="module-7"><a class="toplink" href="#top">Top</a><h2>Module 7 – Tuples & Sets</h2>Why this matters: Tuples are immutable sequences—use them for fixed data. Sets store unique items and are great for removing duplicates or checking membership quickly. Example code:
+<pre><code>coords = (1, 2)
+print(coords, type(coords))
+s = {1, 2, 2, 3}
+print(s)
+s.add(4)
+s.discard(2)
+print(s)</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>(1, 2) &lt;class 'tuple'&gt;
+{1, 2, 3}
+{1, 3, 4}</code></pre>
+<strong>Challenge:</strong> Define a tuple and a set. Attempt to modify both and observe the results.
+</section>
+
+  <section id="module-8"><a class="toplink" href="#top">Top</a><h2>Module 8 – Dictionaries</h2>Why this matters: Dictionaries store key→value pairs. They are perfect for structured data like profiles, settings, or lookup tables where you want to retrieve by name. Lesson: Access with keys, change values, and iterate with .items(). Example code:
+<pre><code>person = {'name': 'Alice', 'age': 25}
+print(person['name'])
+person['age'] = 26
+person['city'] = 'London'
+for key, val in person.items():
+    print(key, '->', val)</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Alice
+name -> Alice
+age -> 26
+city -> London</code></pre>
+<strong>Challenge:</strong> Make a 3-item dictionary, update one value, and loop through keys and values.
+</section>
+
+  <section id="module-9"><a class="toplink" href="#top">Top</a><h2>Module 9 – Control Flow: if, elif, else</h2>Why this matters: If statements let your code make decisions based on data. Use elif for multiple branches and else as a fallback. Example code:
+<pre><code>num = 5
+if num > 0:
+    print('Positive')
+elif num == 0:
+    print('Zero')
+else:
+    print('Negative')</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Positive</code></pre>
+<strong>Challenge:</strong> Classify a number as even/odd and positive/negative.
+</section>
+
+  <section id="module-10"><a class="toplink" href="#top">Top</a><h2>Module 10 – Loops: for & while</h2>Why this matters: Loops repeat work so you don't need to write the same code many times. Use for to iterate sequences and range(); while repeats until a condition changes. Example code:
+<pre><code>for i in range(3):
+    print('Loop', i)
+
+n = 0
+while n < 3:
+    print('While', n)
+    n += 1</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Loop 0
+Loop 1
+Loop 2
+While 0
+While 1
+While 2</code></pre>
+<strong>Challenge:</strong> Use both loops to print even numbers from 0 to 10.
+</section>
+
+  <section id="module-11"><a class="toplink" href="#top">Top</a><h2>Module 11 – Loop Control: break, continue, else</h2>Why this matters: break stops a loop early, continue skips the rest of the current loop iteration, and else on a loop runs if the loop did not hit break. Example code:
+<pre><code>for i in range(5):
+    if i == 3:
+        break
+    print(i)
+else:
+    print('Completed loop')
+
+for i in range(5):
+    if i % 2 == 0:
+        continue
+    print(i)</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>0
+1
+2
+1
+3</code></pre>
+<strong>Challenge:</strong> Find the first multiple of 7 between 1 and 100 using a loop and break.
+</section>
+
+  <section id="module-12"><a class="toplink" href="#top">Top</a><h2>Module 12 – Functions</h2>Why this matters: Functions let you package code into reusable blocks. They make programs easier to read, test and maintain. Use parameters and return values to pass data in and out. Example code:
+<pre><code>def greet(name):
+    return f'Hello, {name}!'
+
+print(greet('Alice'))</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Hello, Alice!</code></pre>
+<strong>Challenge:</strong> Create a function that returns the square of a number and test it.
+</section>
+
+  <section id="module-13"><a class="toplink" href="#top">Top</a><h2>Module 13 – Scope & Lifetime (Beginner Friendly)</h2>Why this matters: Scope explains which variable you're referring to when you use a name. Understanding scope helps you avoid confusing bugs like trying to use a variable before it exists. Key idea — LEGB: Local → Enclosing → Global → Built-in. Example code:
+<pre><code>x = 10  # global
+
+def show():
+    x = 99
+    print('inside:', x)
+
+show()
+print('outside:', x)</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>inside: 99
+outside: 10</code></pre>
+<strong>Challenge:</strong> Write a function that counts how many times it was called using nonlocal. Avoid using names like 'list' or 'sum' for variables.
+</section>
+
+  <section id="module-14"><a class="toplink" href="#top">Top</a><h2>Module 14 – Error Handling: try/except/finally</h2>Why this matters: Errors happen. Use try/except to catch errors and keep your program running. Use finally to run cleanup actions that should always happen. Example code:
+<pre><code>try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print('Cannot divide by zero!')
+finally:
+    print('Done.')</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Cannot divide by zero!
+Done.</code></pre>
+<strong>Challenge:</strong> Ask user for a number and safely convert it to int. If conversion fails, ask again.
+</section>
+
+  <section id="module-15"><a class="toplink" href="#top">Top</a><h2>Module 15 – File I/O</h2>Why this matters: Files let your program save data between runs. Use 'with' to open files safely so they close automatically. Example code:
+<pre><code>with open('test.txt', 'w') as f:
+    f.write('Hello\nWorld')
+
+with open('test.txt', 'r') as f:
+    print(f.read())</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Hello
+World</code></pre>
+<strong>Challenge:</strong> Write a list of strings to a file and read it back line by line.
+</section>
+
+  <section id="module-16"><a class="toplink" href="#top">Top</a><h2>Module 16 – Modules & Packages</h2>Why this matters: Modules are files with code you can reuse. Packages are folders of modules. Python has a rich standard library (math, random, datetime) to solve common problems. Example code:
+<pre><code>import math
+print(math.sqrt(16))
+
+import random
+print(random.randint(1, 10))</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>4.0
+(random number between 1 and 10)</code></pre>
+<strong>Challenge:</strong> Use the random module to simulate rolling a die 10 times.
+</section>
+
+  <section id="module-17"><a class="toplink" href="#top">Top</a><h2>Module 17 – List Comprehensions & Generators</h2>Why this matters: Comprehensions let you create lists concisely and clearly. Generators produce values one-by-one and save memory for large sequences. Example code:
+<pre><code>squares = [n**2 for n in range(10)]
+print(squares)</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
+<strong>Challenge:</strong> Create a list of even numbers under 20 using a comprehension.
+</section>
+
+  <section id="module-18"><a class="toplink" href="#top">Top</a><h2>Module 18 – Classes & Objects</h2>Why this matters: OOP models real things as objects with attributes and behavior. Classes help organize related data and functions into neat packages. Example code:
+<pre><code>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def greet(self):
+        return f"Hi, I'm {self.name} and I'm {self.age}."
+
+p = Person('Alice', 30)
+print(p.greet())</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Hi, I'm Alice and I'm 30.</code></pre>
+<strong>Challenge:</strong> Create a Rectangle class with methods to compute area and perimeter.
+</section>
+
+  <section id="module-19"><a class="toplink" href="#top">Top</a><h2>Module 19 – Simple OOP Project: Contact Manager</h2>Why this matters: Building a small app shows how classes and lists/dictionaries work together. A Contact class organizes contact data; a list stores many contacts. Example code:
+<pre><code>class Contact:
+    def __init__(self, name, phone):
+        self.name = name
+        self.phone = phone
+    def __str__(self):
+        return f"{self.name}: {self.phone}"
+
+contacts = [Contact('Bob', '1234'), Contact('Sue', '5678')]
+for c in contacts:
+    print(c)</code></pre>
+<strong>Expected Output:</strong>
+<pre><code>Bob: 1234
+Sue: 5678</code></pre>
+<strong>Challenge:</strong> Add functions to add, remove, and search contacts; save/load to a file.
+</section>
+
+  <section id="module-20"><a class="toplink" href="#top">Top</a><h2>Module 20 – Capstone Challenge: Contact Book CLI</h2>Why this matters: This final project pulls everything together: control flow, data structures, functions, file I/O, error handling, and optionally classes. Building this demonstrates your understanding. Project brief:
+<ul>
+<li>Create a menu-driven command-line app to:
+  <ul>
+    <li>Add, list, and search contacts</li>
+    <li>Save and load contacts from a file</li>
+    <li>Handle invalid input</li>
+    <li>Use functions and optionally classes</li>
+  </ul>
+</li>
+</ul>
+<strong>Hints:</strong>
+<ul>
+<li>Store contacts as dictionaries or objects</li>
+<li>Use a loop for the menu</li>
+<li>Use with open(...) for file I/O</li>
+</ul>
+<strong>Challenge:</strong> Build the Contact Book CLI and test each feature. Share or run it in your editor.
+</section>
+
+  <footer style="margin-top:30px; font-size:0.9rem; color:#555;">
+    <p>Source: original uploaded PDF. (Saved as <code>python_crash_course_notes.html</code>).</p>
+  </footer>
+</body>
+</html>
